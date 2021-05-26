@@ -16,7 +16,7 @@ def queen(x, n, col):
     count = 0
     
     for y in range(n):
-        # 다음 퀸을 놓을 수 있는 경우만 진행
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         # 다음 퀸을 놓을 수 있는 경우만 진행
         if possible(x, y, n, col):
             col[x] = y # x번째 row의 col index 저장 ex) col[0] = 2 0번째 행의 2번째 col에 놓여져 있다.
             count += queen(x+1, n, col) # row index 증가 후 호출
