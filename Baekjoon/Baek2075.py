@@ -13,11 +13,14 @@ for _ in range(N):
         for i in N2list:
             if result[0] < i:
                 heapq.heappush(result, i)
+                #print(result)
                 heapq.heappop(result)
+                #print(result)
     
     if not result:
         for i in N2list:
             heapq.heappush(result, i)
+            #print(result)
 
 
 

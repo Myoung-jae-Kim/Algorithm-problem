@@ -2,31 +2,31 @@
 #명령어 개수 입력받기
 from sys import stdin
 
-str = list(stdin.readline().strip())
-str1 = []
+left = list(stdin.readline().strip())
+right = []
 N = int(stdin.readline())
 
 
 for i in range(N) :
-    command = stdin.readline().split()
+    command = stdin.readline()
     if command[0] == 'P' : 
-        str.append(command[1])
+        left.append(command[2])
 
     elif command[0] == 'B' : 
-        if str : 
-            str1.pop()
+        if left : 
+            left.pop()
         else : 
             continue
 
     elif command[0] == 'D' : 
-        if str1 : 
-            str.append(str1.pop())
+        if right : 
+            left.append(right.pop())
         else :
             continue
     elif command[0] == 'L' :
-        if str : 
-            str1.append(str.pop())
+        if left : 
+            right.append(left.pop())
         else :
             continue
 
-print(''.join(str + list(reversed(str1))))
+print(''.join(left + list(reversed(right))))
