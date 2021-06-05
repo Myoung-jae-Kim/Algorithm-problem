@@ -4,11 +4,9 @@ N = int(input())
 words = []
 result = []
 for i in range(N):
-        words.append(list(input()))
+    words.append(input())
 
-words.sort(key=lambda x:(len(x),x))
+words = list(set(words))
+words.sort(key=lambda x : (len(x),x))
 
-for i in words:
-    if i not in result:
-        print(''.join(i))
-        result.append(i)
+print("\n".join(words))
