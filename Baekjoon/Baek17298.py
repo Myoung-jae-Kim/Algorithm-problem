@@ -1,8 +1,12 @@
-n = int(input())
-nums = list(map(int, input().split()))
-stack = []
+#Baekjoon 17298번 오큰수
 
-ans = [-1 for _ in range(n)]
+import sys
+
+N = int(sys.stdin.readline())
+
+nums = list(map(int, sys.stdin.readline().split()))
+stack = []
+ans = [-1 for _ in range(N)]
 
 for i in range(len(nums)):
     #스택이 비지 않았으면서, 다음수가 해당수보다 크면
@@ -10,4 +14,8 @@ for i in range(len(nums)):
         #ans[(stack.pop()=현재 수에 해당하는 인덱스)]배열에 다음수 집어넣기
         ans[stack.pop()] = nums[i]
     stack.append(i)
-print(*ans)
+
+#print(*ans)
+
+for i in range(N):
+    print(ans[i], end = " ")
