@@ -1,3 +1,4 @@
+# 숫자 정사각형
 F = []
 N, M = map(int, input().split(' '))
 SIZE = 0

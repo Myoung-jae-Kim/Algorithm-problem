@@ -8,3 +8,4 @@ if ((V-A)%(A-B) == 0):
     print(Day + 1)
 else:
     print(Day + 2)
+
